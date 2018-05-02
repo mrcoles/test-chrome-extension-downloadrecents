@@ -1,0 +1,12 @@
+{
+  "name": "test-chrome-extension-downloadrecents",
+  "version": "0.1",
+  "manifest_version": 2,
+  "description":
+    "Test of Save As with download and defaulting to the recent save as directory",
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "minimum_chrome_version": "49",
+  "permissions": ["downloads"]
+}

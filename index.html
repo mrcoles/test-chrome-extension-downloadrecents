@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=utf8>
+    <title>Download Test</title>
+    <style>
+      #content { max-width: 800px; margin: 3em auto; padding: 0 15px; }
+      body { color: #333; font: normal 16px/24px helvetica; }
+      h3, p { margin-bottom: 24px; }
+    </style>
+  </head>
+  <body>
+    <div id="content">
+      <h3>Download test</h3>
+      <p>
+        Both buttons call
+        <a href="https://developer.chrome.com/extensions/downloads#method-download">chrome.downloads.download</a>
+        to download an image with the <code>SaveAs</code> option set as true,
+        however one doesn’t specify a filename and the other does.
+      </p>
+      <p>
+        (A) <button class="dl" id="dl">Download without a filename</button>
+        - will default to wherever the user most recently chose to
+        “Save As” a file. Try saving this to the Desktop, then try it again,
+        and you’ll see it default ot the Desktop.
+      </p>
+      <p>
+        (B) <button class="dl" id="dl-name">Download with a filename</button>
+        -  will always default to the downloads directory.
+      </p>
+      <p>
+        There is no way to specify a <code>filename</code> while allowing “Save
+        As” to default to most recently used directory.
+      </p>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
